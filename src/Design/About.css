@@ -1,0 +1,22 @@
+.body {
+  background-color: blueviolet;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,600&display=swap");
+
+.container-about {
+  background-image: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  margin-top: 0%;
+  display: grid;
+}
+#ab {
+  text-align: center;
+  font-variant: normal;
+}
+
+.row-about {
+  margin-top: 2%;
+  display: grid;
+  height: 50vh;
+  align-self: center;
+}

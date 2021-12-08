@@ -1,0 +1,16 @@
+.body {
+  background-color: black;
+}
+#Footer {
+  /* position:absolute; */
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 20vh;
+  margin-top: 100vh;
+  background-image: linear-gradient(135deg, #3c8ce7 70%, #00eaff 100%);
+  color: white;
+}
+#footer-he {
+  margin-left: 40%;
+}
