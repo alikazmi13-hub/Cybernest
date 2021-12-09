@@ -29,33 +29,34 @@ function Navbar() {
     //       </div>
     //     </div>
     //   </nav>
+    <div className="navbar">
+      <ul className="navs">
+        {/* <img src="/Components/Images/logo.png"/> */}
 
-    <ul className="navs">
-      {/* <img src="/Components/Images/logo.png"/> */}
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">
+            Home
+          </a>
+        </li>
 
-      <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="#">
-          Home
-        </a>
-      </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/Project">
+            Projects
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/Contact">
+            Contact
+          </a>
+        </li>
 
-      <li className="nav-item">
-        <a className="nav-link" href="/Project">
-          Projects
-        </a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/Contact">
-          Contact
-        </a>
-      </li>
-
-      <li className="nav-item">
-        <a className="nav-link" href="/About">
-          About
-        </a>
-      </li>
-    </ul>
+        <li className="nav-item">
+          <a className="nav-link" href="/About">
+            About
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 }
 

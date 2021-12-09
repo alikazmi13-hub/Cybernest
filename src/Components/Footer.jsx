@@ -5,10 +5,10 @@ import "../Design/Footer.css";
 const Footer = () => {
   return (
     <>
-      <div id="Footer">
-        <h1 id="footer-he">WeMeet</h1>
+      <div className="Footer">
+        <h1 className="footer-he">WeMeet</h1>
         <div className="col-sm">@copyright Cybernest</div>
-        <h4 id="footer-h4">WE PROVIDE BEST IT SOLUTIONS</h4>
+        <h4 className="footer-h4">WE PROVIDE BEST IT SOLUTIONS</h4>
       </div>
     </>
   );

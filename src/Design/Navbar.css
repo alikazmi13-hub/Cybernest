@@ -1,8 +1,4 @@
-.body {
-  background-color: green;
-}
-
-.navs {
+.navbar {
   width: 100%;
   /* background-position: fixed; */
   background-origin: border-box;

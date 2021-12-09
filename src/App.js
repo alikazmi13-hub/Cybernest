@@ -14,14 +14,21 @@ import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
 import Project from "./Components/Project";
 import Footer from "./Components/Footer";
+import Logout from "./Components/Logout";
+import { useSelector } from "react-redux";
+import { selectUser } from "./Features/userSlice";
 // import { Router } from "express";
 // Main App Function
 // ----------------
 function App() {
+  // check idf we are logged in or loggout
+  const user = useSelector(selectUser);
+
   return (
     <div className="App">
+      <div> {user ? <Logout /> : <Login />}</div>
       <Routes>
-        <Route path="/" element={<Login />} />
+        {/* <Route exacct path="/" element={<Login />} /> */}
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Portfolio" element={<Portfolio />} />
