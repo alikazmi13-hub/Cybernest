@@ -38,7 +38,7 @@ const Contact = () => {
   };
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container contact-form">
         <div className="contact-image">
           <img
@@ -115,7 +115,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

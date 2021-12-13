@@ -26,9 +26,9 @@ function App() {
 
   return (
     <div className="App">
-      <div> {user ? <Logout /> : <Login />}</div>
+      {/* <div> {user ? <Logout /> : <Login />}</div> */}
       <Routes>
-        {/* <Route exacct path="/" element={<Login />} /> */}
+        <Route exact path="/" element={<Login />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Portfolio" element={<Portfolio />} />

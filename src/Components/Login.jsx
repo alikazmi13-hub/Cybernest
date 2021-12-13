@@ -2,23 +2,37 @@ import reactDom from "react-dom";
 import react from "react";
 import Navbar from "./Navbar";
 import "../Design/Login.css";
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
 import { useDispatch } from "react-redux";
 import { login } from "../Features/userSlice";
-// import "../Design/Navbar.css";
-// import "../Design/Footer.css";
-// Main Component Function
+// main login component function
 const Login = () => {
+  // use state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  // Dispatch function
   const dispatch = useDispatch();
+  // Handle Submit button
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // here we are input some data to some slice or reducer
+    axios
+      .post("http://localhost:4000/api", (req, res) => {
+        res.send({
+          res: "hello i am posting from login axios.post function",
+        });
+      })
+      .then(function (res) {
+        console.log(res, "posted");
+      })
+      .catch(function (error) {
+        console.log(error, "not posted");
+      });
+
+    // Dispacth
     dispatch(
       login({
         name: name,
@@ -29,10 +43,17 @@ const Login = () => {
     );
   };
 
+  // sending data to server
+
+  useEffect(() => {});
   return (
     <>
       <div className="login">
-        <form className="login_form" onSubmit={(e) => handleSubmit(e)}>
+        <form
+          className="login_form"
+          onSubmit={(e) => handleSubmit(e)}
+          method="post"
+        >
           <h1>LOGIN</h1>
 
           <input
@@ -42,13 +63,14 @@ const Login = () => {
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            type="name"
+            type="email"
             placeholder="Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            type="name"
+            type="password"
+            id="password"
             placeholder="Your Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
